@@ -20,7 +20,7 @@ class Api::V1::ProductsController < ApplicationController
       render json: { errors: product.errors }, status: :unprocessable_entity
     end
   end
-  
+
   def update
     if @product.update(product_params)
       render json: @product
