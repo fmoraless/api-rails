@@ -4,7 +4,8 @@ before_action :check_owner, only: %i[update destroy]
 
     # GET /users/1
     def show
-        render json: UserSerializer.new(@user).serializable_hash
+        options = { include: [:products] }
+        render json: UserSerializer.new(@user, options).serializable_hash
     end
 
     def create
