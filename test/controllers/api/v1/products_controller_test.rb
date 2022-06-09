@@ -72,4 +72,6 @@ class Api::V1::ProductsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :forbidden
   end
+
+
 end
